@@ -14,6 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class State {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
@@ -23,7 +24,7 @@ public class State {
 
 
     @ManyToOne
-    @JoinColumn(name="countryid",insertable = false ,updatable = false)
+    @JoinColumn(name = "countryid", insertable = false, updatable = false)
     private Country country;
 
     private Integer countryid;
